@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Aprediendo DOM Juego de elementos</title>
+        <link rel="stylesheet" href="./style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body class="pagina">
+        <h1 class="title">STAR WARS</h1>
+        <section id="seleccionar-personaje">
+            <h2>Elige tu personaje</h2>
+            <div id = "contenedor-luchadores"class="cajas-personajes">
+            </div>
+            <p>
+                <button id="seleccionar">Seleccionar</button>
+            </p>
+        </section>
+        <section id="area-combate">
+            <h2>Que la fuerza te acompañe</h2>
+            <canvas id="mapa"></canvas>
+            <button onmouseup="detenerMovimiento()"onmousedown="moverPersonajeArriba()">Up</button>
+            <div>
+                <button onmouseup="detenerMovimiento()"onmousedown="moverPersonajeIzquierda()">Left</button>
+                <button onmouseup="detenerMovimiento()"onmousedown="moverPersonajeAbajo()">Down</button>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverPersonajeDerecha()">Right</button>
+            </div>
+        </section>
+        <section id="seleccionar-ataque">
+            <h2>Elige tu ataque
+            </h2>
+            <div id="contenedor-ataques">
+            </div>
+            <div>
+                <div id="mensajes">
+                    <section id="mensaje-final"></section>
+                    <p id="resultado-batalla">Suerte!</p>
+                    <section id="reiniciar">
+                        <p>
+                            <button id="boton-reiniciar">Vuelve a Intentar</button>
+                        </p>
+                    </section>
+                </div>
+            </div>
+            <div class="ataques">
+                <div class="informacion-partida">
+                    <p id="victorias-personaje">0</p>
+                    <p id="personaje-seleccionado"></p>
+                    <div id="ataque-jugador0"></div>
+                    <div id="ataque-jugador1"></div>
+                    <div id="ataque-jugador2"></div>
+                    <div id="ataque-jugador3"></div>
+                    <div id="ataque-jugador4"></div>
+                </div>
+                <div class="informacion-partida">
+                    <p id="victorias-pc">0</p>
+                    <p id="personaje-enemigo"></p>
+                    <div id="ataque-enemigo0"></div>
+                    <div id="ataque-enemigo1"></div>
+                    <div id="ataque-enemigo2"></div>
+                    <div id="ataque-enemigo3"></div>
+                    <div id="ataque-enemigo4"></div>
+                </div>
+            </div> 
+        </section>
+        <script src="js/JuegoDeElementos.js"></script>
+    </body>
+</html>
